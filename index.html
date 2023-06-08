@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek - ML Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Playfair+Display&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(18, 18, 41);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            background-color: rgb(30, 30, 63);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0px 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(196, 196, 240);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(146, 146, 237);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0px;
+        }
+
+        .firstSection>div {
+            width: 38%;
+        }
+
+        .leftSection {
+            font-size: 2.8rem;
+        }
+        
+        .leftSection .buttons{
+            padding: 50px 0;
+        }
+        .leftSection .btn{
+            padding: 12px;
+            background: rgb(30, 30, 63);
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px #ddd;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .rightSection img {
+            width: 80%;
+            /* margin: 50px 0px; */
+        }
+
+        .text-purple {
+            color: rgb(158, 81, 231);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(158, 81, 231);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondSection h1 {
+            max-width: 280px;
+            border-bottom: 0 solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 2.5rem;
+            border-radius: 30px;
+            font-size: 1.9rem;
+            box-shadow: 0 5px 20px #ddd;
+            margin-top: 70px;
+        }
+
+        .profilePic {
+            margin: 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .secondSection img {
+            width: 20%;
+        }
+
+        .bio-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 40px;
+            margin-bottom: 100px;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 90vh;
+        }
+
+        .thirdSection h1 {
+            max-width: 310px;
+            border-bottom: 0 solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 2.5rem;
+            border-radius: 30px;
+            font-size: 1.9rem;
+            box-shadow: 0 5px 20px #ddd;
+            margin-top: 30px;
+
+        }
+
+        .thirdSection .box {
+            background: white;
+            width: 2px;
+            height: 50vh;
+            margin: 90px 0px;
+        }
+
+        .thirdSection .horizontal {
+            width: 80px;
+            height: 1px;
+            background-color: white;
+        }
+
+        .feynnLabs {
+            width: 23px;
+            position: relative;
+            left: 100px;
+            top: -10px;
+
+        }
+
+        #h-title {
+            position: relative;
+            width: 100px;
+            top: -40px;
+            left: 130px;
+        }
+
+        .h-text {
+            position: relative;
+            width: 850px;
+            left: 100px;
+            top: -20px;
+        }
+
+        .h-desc {
+            position: relative;
+            width: 850px;
+            left: 100px;
+            top: -13px;
+        }
+
+        #projects {
+            max-width: 80vw;
+            margin: auto;
+            height: 260vh;
+        }
+
+        .project-section h1 {
+            max-width: 230px;
+            border-bottom: 0 solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 2.5rem;
+            border-radius: 30px;
+            font-size: 1.9rem;
+            box-shadow: 0 5px 20px #ddd;
+            margin-top: 30px;
+            margin-bottom: 100px;
+        }
+
+        /* Section 2*/
+        /* .projects-section {
+            text-align: center;
+            padding: 10rem 2rem;
+            background: #eceff1;
+        } */
+
+        /* .projects-section-header {
+            max-width: 640px;
+            margin: 3rem auto 6rem auto;
+            border-bottom: 0 solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 38px;
+            word-spacing: 4px;
+            letter-spacing: 3px;
+            box-shadow: 0 5px 20px #ddd;
+        } */
+
+        /* @media (max-width: 28.75em) {
+            .projects-section-header {
+                font-size: 4rem;
+            }
+        } */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 4rem;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            margin-bottom: 6rem;
+        }
+
+        /* @media (max-width: 30.625em) {
+            .projects-section {
+                padding: 6rem 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        } */
+
+        .project {
+
+            background: rgb(30, 30, 63);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 28px;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            transition: all 2s, transform 0.5s, box_shadow 0.5s;
+            text-decoration: none;
+        }
+
+        .project:hover {
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.6);
+            transform: scale(1.08);
+        }
+
+        .project-image {
+            height: calc(100% - 13rem);
+            width: 100%;
+            object-fit: cover;
+            border-top-right-radius: 28px;
+            border-top-left-radius: 28px;
+        }
+
+        .project-title {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 2rem 0.5rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .skills {
+            max-width: 80vw;
+            margin: auto;
+            height: 90vh;
+            text-align: center;
+        }
+
+        .skills h1 {
+            max-width: 230px;
+            border-bottom: 0 solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 2.5rem;
+            border-radius: 30px;
+            font-size: 1.9rem;
+            box-shadow: 0 3px 10px #ddd;
+            margin-top: 70px;
+            margin-bottom: 120px;
+        }
+
+        .skills-wrapper img {
+            padding: 1.25rem;
+        }
+
+        .icon {
+            width: 9.875rem;
+            height: 9.25rem;
+        }
+
+        .contacts{
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .contacts h1 {
+            max-width: 230px;
+            border-bottom: 0 solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 2.5rem;
+            border-radius: 30px;
+            font-size: 1.9rem;
+            box-shadow: 0 5px 20px #ddd;
+            margin-top: 70px;
+            margin-bottom: 100px;
+        }
+
+        footer{
+            background-color: rgb(33, 31, 35);
+        }
+
+        .footer{
+            display: flex;
+            padding: 23px 120px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul{
+            list-style: none;
+        }
+
+        .footer >div{
+            width: 223px;
+        }
+
+        footer .footer-rights{
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Abhishek Anand</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="text-purple">Abhishek</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg1.png" alt="developer">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>More About Me</h1>
+            <div class="profilePic">
+                <img src="prof.png" alt="">
+            </div>
+            <div class="bio-text">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente rerum molestias, quod asperiores
+                    doloribus facilis maxime cupiditate. Ducimus, atque quisquam repellat voluptatum, veniam, nihil
+                    officia amet debitis fugit cumque voluptas mollitia natus sapiente perspiciatis exercitationem
+                    voluptates obcaecati esse impedit provident! Sed facere optio assumenda ipsum est fuga, animi
+                    commodi corporis earum expedita ullam? Alias dolore at, natus repellendus ipsa harum culpa aut
+                    voluptas? Saepe, nam veniam. Saepe, quaerat adipisci possimus voluptatibus illo enim ad veniam
+                    ipsum? Cumque modi minima voluptas odit quibusdam, omnis quas. Quibusdam vel asperiores dolor
+                    laboriosam blanditiis sunt id, aspernatur delectus deserunt ab possimus iusto architecto numquam
+                    aliquid assumenda commodi ducimus amet rem perspiciatis aliquam! Nostrum delectus iusto nemo,
+                    quibusdam ipsa iste dolorem voluptatibus blanditiis natus, facere, earum non quasi facilis
+                    architecto temporibus magni aperiam! Quaerat, laboriosam quae alias, dolorem illo qui perferendis
+                    exercitationem amet pariatur ad quia vero eligendi earum! Dignissimos, odit sit tempore odio
+                    repudiandae rerum asperiores. Atque in sequi fugit quos reprehenderit porro error. Error maiores
+                    dolorum mollitia, sapiente illo optio in fugiat corrupti fugit amet, veniam dicta quod dignissimos
+                    quis illum consequuntur at aut aperiam enim aspernatur excepturi, eaque velit? Qui unde delectus
+                    praesentium laudantium et, quidem quos neque pariatur tempore, omnis nam.
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="horizontal">
+                    <img class="feynnLabs" src="feynn.png" alt="feynnLabs.png">
+                    <div id="h-title" class="text-gray">
+                        <span>FeyNN Labs</span>
+                    </div>
+                    <div class="h-text">
+                        <h2>Machine Learning Engineer</h2>
+                    </div>
+                    <div class="h-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam impedit
+                        corporis eaque maiores aut nesciunt accusamus ipsum doloribus perferendis rem ullam quas quae
+                        quis quos corrupti sit odio molestiae excepturi quam explicabo, ad id. Quas, tenetur molestias
+                        esse modi quos rerum ipsum nostrum ratione, sapiente aperiam deserunt earum, suscipit quasi
+                        aliquid obcaecati rem adipisci amet eveniet impedit. Illo voluptate quas delectus facilis optio
+                        in iste ad doloribus aliquid aut consectetur totam omnis nihil, repellendus autem, neque fuga
+                        incidunt architecto itaque odit amet tempora inventore? Maxime, obcaecati voluptates facilis
+                        aliquid praesentium at dolorem sed adipisci, numquam nobis, repellendus magni a corporis.</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="projects" class="project-section">
+            <span class="text-gray">What I have learnt so far</span>
+            <h1>My Projects</h1>
+            <div class="projects-grid">
+                <a href="https://github.com/anandabhi2910/Generative-Adversarial-Text-to-Image-Synthesis"
+                    target="_blank" class="project project-tile">
+                    <img class="project-image" src="gan.png" alt="project" />
+                    <p class="project-title">
+                        Generative-Adversarial-Text-to-Image-Synthesis
+                    </p>
+                </a>
+
+                <a href="https://github.com/anandabhi2910/AI-in-Dairy-Farm-Market-segmentation-and-Implementation"
+                    target="_blank" class="project project-tile">
+                    <img class="project-image" src="Dairy.png" alt="project" />
+                    <p class="project-title">
+
+                        AI in Dairy Farm
+
+                    </p>
+                </a>
+
+                <a href="https://github.com/anandabhi2910/Electric-Vehicle-in-India_Market-Segmentation" target="_blank"
+                    class="project project-tile">
+                    <img class="project-image" src="ev.png" alt="project" />
+                    <p class="project-title">
+
+                        Market Segmentation of Electric Vehicle in India
+
+                    </p>
+                </a>
+
+                <a href="https://github.com/anandabhi2910/Encrypt-Decrypt_using_Chaos" target="_blank"
+                    class="project project-tile">
+                    <img class="project-image" src="chaos.png" alt="project" />
+                    <p class="project-title">
+
+                        Encryption & Decryption using Chaos Theory
+
+                    </p>
+                </a>
+
+                <a href="https://github.com/anandabhi2910/DL-Project_Customer_Churn_Prediction/tree/main/Cutomer_Churn"
+                    target="_blank" class="project project-tile">
+                    <img class="project-image" src="customer.png" alt="project" />
+                    <p class="project-title">
+
+                        Customer Churn Prediction
+
+                    </p>
+                </a>
+
+                <a href="https://github.com/anandabhi2910/Sales_Analysis_Power_BI" target="_blank"
+                    class="project project-tile">
+                    <img class="project-image" src="sales.png" alt="project" />
+                    <p class="project-title">
+
+                        Sales Analysis Dashboard using Power BI
+
+                    </p>
+                </a>
+
+                <a href="https://github.com/anandabhi2910/Bangalore_House_Prediction" target="_blank"
+                    class="project project-tile">
+                    <img class="project-image" src="BHP.png" alt="project" />
+                    <p class="project-title">
+
+                        Bangalore House Prediction App
+
+                    </p>
+                </a>
+
+            </div>
+        </section>
+        <hr>
+        <section class="skills" id="skills">
+            <h1 class="skill-header">My Top Skills</h1>
+
+            <div class="skills-wrapper">
+                <div class="first-set animate__animated animate__pulse">
+                    <img src="icons8-c++.svg" alt="" loading="lazy" class="icon icon-card" />
+                    <img src="icons8-python.svg" alt="" loading="lazy" class="icon icon-card" />
+                    <img src="icons8-git.svg" alt="" loading="lazy" class="icon icon-card" />
+                </div>
+
+                <div class="second-set animate__animated animate__pulse">
+                    <img src="icons8-html5.svg" alt="" loading="lazy" class="icon icon-card" />
+                    <img src="icons8-css-logo.svg" alt="" loading="lazy" class="icon icon-card" />
+                    <img src="icons8-javascript.svg" alt="" loading="lazy" class="icon icon-card" />
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="contacts">
+            <h1 class="skill-header">Contact Me</h1>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Abhishek's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; abhisportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'ML Engineer', 'Data Analyst'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
